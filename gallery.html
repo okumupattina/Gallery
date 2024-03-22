@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("https://images.pexels.com/photos/17079210/pexels-photo-17079210/free-photo-of-empty-tree-on-a-beach.jpeg?auto=compress&cs=tinysrgb&w=600");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .container {
+        max-width: 1000px;
+        margin: 100px auto;
+        padding: 0 20px;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 20px;
+    }
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .gallery-item .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .gallery-item:hover .overlay {
+        opacity: 1;
+    }
+    .description {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 14px;
+        font-style: italic;
+    }
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="index.html">Original</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About Us</a>
+    </div>
+
+<div class="container">
+    <h1>Image Gallery</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="/Images/Joshua.JPG" alt="Image 1">
+            <div class="overlay">
+                <div class="description">i am an outgoing person</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="/Images/_DSC0462.JPG" alt="Image 2">
+            <div class="overlay">
+                <div class="description">i am a brave lady</div>
+            </div>
+        </div>
+        <!-- Add more gallery items as needed -->
+        <div class="gallery-item">
+            <img src="/Images/_DSC0413.JPG" alt="Image 1">
+            <div class="overlay">
+                <div class="description">i am an understanding person</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="/Images/_DSC0414.JPG" alt="Image 1">
+            <div class="overlay">
+                <div class="description">paradise</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="/Images/_DSC0459.JPG" alt="Image 1">
+            <div class="overlay">
+                <div class="description">i like cycling</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
